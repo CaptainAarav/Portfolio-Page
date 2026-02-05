@@ -126,8 +126,11 @@ function getAllServices() {
           const lastSeen = new Date(service.lastSeen);
           const secondsSinceLastSeen = (now - lastSeen) / 1000;
           
+          // Normalize stored status to lowercase
+          const storedStatus = service.status ? service.status.toLowerCase() : 'offline';
+          
           // If service hasn't reported in >60 seconds, mark as offline
-          const currentStatus = secondsSinceLastSeen > 60 ? 'offline' : service.status;
+          const currentStatus = secondsSinceLastSeen > 60 ? 'offline' : storedStatus;
           
           return {
             serviceId: service.serviceId,

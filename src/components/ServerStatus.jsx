@@ -185,6 +185,46 @@ const ServerStatus = () => {
                               
                               {service.details && Object.keys(service.details).length > 0 && (
                                 <div className="status-details">
+                                  {/* RAM Usage Meter */}
+                                  {service.details.ramUsage !== undefined && (
+                                    <div className="status-meter">
+                                      <div className="status-meter-header">
+                                        <span className="status-detail-label">RAM Usage:</span>
+                                        <span className="status-detail-value">
+                                          {service.details.ramUsage > 100 
+                                            ? `${service.details.ramUsage.toFixed(0)} MB` 
+                                            : `${service.details.ramUsage.toFixed(1)}%`}
+                                        </span>
+                                      </div>
+                                      <div className="status-meter-bar">
+                                        <div 
+                                          className="status-meter-fill status-meter-ram"
+                                          style={{ 
+                                            width: service.details.ramUsage > 100 
+                                              ? `${Math.min(100, (service.details.ramUsage / 2048) * 100)}%` // Assume 2GB = 100%, adjust as needed
+                                              : `${Math.min(100, service.details.ramUsage)}%` 
+                                          }}
+                                        ></div>
+                                      </div>
+                                    </div>
+                                  )}
+                                  
+                                  {/* CPU Usage Meter */}
+                                  {service.details.cpuUsage !== undefined && (
+                                    <div className="status-meter">
+                                      <div className="status-meter-header">
+                                        <span className="status-detail-label">CPU Usage:</span>
+                                        <span className="status-detail-value">{service.details.cpuUsage.toFixed(1)}%</span>
+                                      </div>
+                                      <div className="status-meter-bar">
+                                        <div 
+                                          className="status-meter-fill status-meter-cpu"
+                                          style={{ width: `${Math.min(100, service.details.cpuUsage)}%` }}
+                                        ></div>
+                                      </div>
+                                    </div>
+                                  )}
+                                  
                                   {service.details.players !== undefined && (
                                     <div className="status-detail-item">
                                       <span className="status-detail-label">Players:</span>

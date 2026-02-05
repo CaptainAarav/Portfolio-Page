@@ -206,6 +206,90 @@
   font-weight: 500;
 }
 
+/* Usage Meters */
+.status-meter {
+  margin-bottom: 0.75rem;
+}
+
+.status-meter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.status-meter-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.status-meter-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+
+.status-meter-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.status-meter-ram {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.status-meter-ram[style*="width: 0%"] {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.status-meter-cpu {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.status-meter-cpu[style*="width: 0%"] {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Warning colors for high usage */
+.status-meter-ram[style*="width: 8"] {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.status-meter-ram[style*="width: 9"],
+.status-meter-ram[style*="width: 10"] {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.status-meter-cpu[style*="width: 8"] {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.status-meter-cpu[style*="width: 9"],
+.status-meter-cpu[style*="width: 10"] {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
 .status-indicator {
   position: absolute;
   top: 1rem;
