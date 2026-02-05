@@ -43,6 +43,7 @@
   color: var(--text-primary);
   margin-bottom: 1rem;
   font-size: 2rem;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .contact-info p {

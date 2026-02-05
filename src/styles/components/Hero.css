@@ -74,6 +74,7 @@
   margin-bottom: 1.5rem;
   animation: fadeInUp 1s ease-out;
   font-size: clamp(3rem, 6vw, 5.5rem);
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .title-line {
@@ -161,32 +162,36 @@
   }
 
   .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
   }
 
   .hero-buttons .btn {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
   }
   
   .hero-buttons .btn-line-primary {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   
   .hero-buttons .btn-line-secondary {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .indicator-panel {
-    width: 200px;
-    height: 140px;
-    padding: 0.6rem;
+    width: 120px;
+    height: 120px;
+    padding: 0.5rem;
+    flex-shrink: 0;
   }
 
   .panel-word {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 
   .gradient-orb {

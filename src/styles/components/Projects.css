@@ -96,6 +96,7 @@
   font-size: 1.5rem;
   color: var(--text-primary);
   margin-bottom: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .project-description {
