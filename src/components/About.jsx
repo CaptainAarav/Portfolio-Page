@@ -21,13 +21,14 @@ const About = () => {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -55,7 +56,7 @@ const About = () => {
           </div>
           <div className="about-text">
             <p>
-              I'm Aarav, a student deeply interested in technology, engineering, and aviation, driven by a need to understand how complex systems actually work under the hood. I don't just use tools or software—I break them apart mentally, rebuild them, and question assumptions until the logic is solid. I run my own servers and infrastructure and I'm comfortable working in Linux, reading logs, debugging failures, and configuring systems properly. When something goes wrong, I want the root cause, not a surface-level fix.
+              I'm Aarav, a student deeply interested in technology, engineering, and aviation, driven by a need to understand how complex systems actually work under the hood. I don't just use tools or software | I break them apart mentally, rebuild them, and question assumptions until the logic is solid. I run my own servers and infrastructure and I'm comfortable working in Linux, reading logs, debugging failures, and configuring systems properly. When something goes wrong, I want the root cause, not a surface-level fix.
             </p>
             <p>
               My technical focus is on building strong foundations in software and systems engineering. I'm learning backend development with TypeScript and Python, alongside lower-level concepts like memory management in C, because I want to understand what abstractions hide and why systems behave the way they do. I prefer doing the work myself and value blunt, no-nonsense feedback that exposes weak thinking so I can improve.
@@ -85,7 +86,7 @@ const About = () => {
               Aviation is a major part of who I am. I'm deeply into flight simulation and real-world aviation procedures, with a strong focus on realism, accuracy, and discipline. I study aircraft systems, navigation, and operational workflows, and I enjoy building digital and physical setups that mirror real aircraft behaviour as closely as possible.
             </p>
             <p>
-              Long-term, I aim to either become a commercial airline pilot—ideally flying for Ryanair—or work as a full-stack developer, building robust, well-engineered systems. In both paths, the same principles drive me: precision over shortcuts, deep understanding over surface-level knowledge, and continuous improvement through deliberate practice.
+              Long-term, I aim to either become a commercial airline pilot | ideally flying for Ryanair | or work as a full-stack developer, building robust, well-engineered systems. In both paths, the same principles drive me: precision over shortcuts, deep understanding over surface-level knowledge, and continuous improvement through deliberate practice.
             </p>
           </div>
         </div>
