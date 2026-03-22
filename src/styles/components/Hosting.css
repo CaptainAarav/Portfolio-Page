@@ -1,0 +1,197 @@
+.hosting {
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-silhouette-11 {
+  top: 20%;
+  right: 5%;
+  width: 260px;
+  height: 195px;
+  max-width: 23vw;
+  transform: rotate(-14deg);
+}
+
+.section-silhouette-12 {
+  bottom: 25%;
+  left: 6%;
+  width: 290px;
+  height: 218px;
+  max-width: 26vw;
+  transform: rotate(15deg);
+}
+
+.hosting-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  position: relative;
+  z-index: 2;
+}
+
+.hosting-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hosting-intro {
+  margin-bottom: 3rem;
+}
+
+.hosting-description {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hosting-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.hosting-card {
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+
+.hosting-card-title {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.hosting-card-text {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.hosting-servers {
+  margin-bottom: 3rem;
+}
+
+.hosting-servers-title {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.servers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.server-card {
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+
+.server-card-title {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+}
+
+.server-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.spec-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.hosting-cta {
+  text-align: center;
+  padding: 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.hosting-cta-text {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.hosting-link {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.hosting-link:hover {
+  color: var(--accent-blue-hover);
+  text-decoration: underline;
+}
+
+.hosting-discord {
+  color: var(--accent-blue);
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .hosting-details-grid,
+  .servers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hosting-description {
+    font-size: 1rem;
+  }
+
+  .hosting-card,
+  .server-card {
+    padding: 1.5rem;
+  }
+
+  .hosting-cta {
+    padding: 1.5rem;
+  }
+
+  .hosting-cta-text {
+    font-size: 1rem;
+  }
+}

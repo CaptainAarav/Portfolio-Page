@@ -94,6 +94,65 @@ const Projects = () => {
       tech: ['Web Development', 'Virtual Airline', 'Aviation', 'Full Stack'],
       liveUrl: '#',
       githubUrl: '#'
+    },
+    {
+      title: 'Fatty Bot',
+      status: 'not maintained',
+      description: 'A bot made for my discord server for the FATTY SMP it was coded using discord.py and includes some funny features really just making fun of my friends',
+      tech: ['Discord.py', 'Python', 'Discord Bot'],
+      liveUrl: '#',
+      githubUrl: '#',
+      resources: [
+        { name: 'discord.py Documentation', url: 'https://discordpy.readthedocs.io/en/stable/' }
+      ]
+    },
+    {
+      title: 'Jet2 Manager',
+      status: 'active',
+      description: 'My biggest bot for my Jet2 | ATC24 virtual airline discord server using discord.py',
+      tech: ['Discord.py', 'Python', 'Discord Bot'],
+      liveUrl: '#',
+      githubUrl: '#',
+      resources: [
+        { name: 'discord.py Documentation', url: 'https://discordpy.readthedocs.io/en/stable/' },
+        { name: 'Jet2 | ATC24 Discord', url: 'https://discord.gg/49spvsXE' }
+      ]
+    },
+    {
+      title: 'Manager Turtle',
+      status: 'active',
+      description: 'A discord bot for my friends virtual cafe discord server using discord.py',
+      tech: ['Discord.py', 'Python', 'Discord Bot'],
+      liveUrl: '#',
+      githubUrl: '#',
+      resources: [
+        { name: 'discord.py Documentation', url: 'https://discordpy.readthedocs.io/en/stable/' },
+        { name: 'The Turtle Café Discord', url: 'https://discord.gg/n5dcXg5V' }
+      ]
+    },
+    {
+      title: 'aaravsnetflix.com',
+      status: 'active',
+      description: 'A jellyfin server hosted on my Pi using docker that I have all my shows note that if you wanna try to use it you will have to have an account first',
+      tech: ['Jellyfin', 'Docker', 'Self-Hosted', 'Media Server'],
+      liveUrl: 'https://aaravsnetflix.com/web/#/home',
+      githubUrl: '#',
+      resources: [
+        { name: 'Jellyfin', url: 'https://jellyfin.org' },
+        { name: 'aaravsnetflix.com', url: 'https://aaravsnetflix.com/web/#/home' }
+      ]
+    },
+    {
+      title: 'fattyhosting.com',
+      status: 'not maintained',
+      description: 'A minecraft hosting site for my games hosting server where people could ask to host their own servers',
+      tech: ['Web Development', 'AMP', 'Minecraft Hosting'],
+      liveUrl: 'https://fattyhosting.com',
+      githubUrl: '#',
+      resources: [
+        { name: 'AMP Official website', url: 'https://cubecoders.com/AMP' },
+        { name: 'fattyhosting.com', url: 'https://fattyhosting.com' }
+      ]
     }
   ];
 

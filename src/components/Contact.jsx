@@ -42,12 +42,37 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic would go here
-    setFormStatus('Message sent! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
-    setTimeout(() => setFormStatus(''), 5000);
+    
+    setFormStatus('Sending...');
+    
+    // Use relative URL if no env var is set, so it works both locally and in production
+    const API_URL = process.env.REACT_APP_API_URL || '/api';
+    
+    try {
+      const response = await fetch(`${API_URL}/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      setFormStatus('Message sent! I\'ll get back to you soon.');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setFormStatus(''), 5000);
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setFormStatus(`Error: ${error.message}. Please try again or email me directly.`);
+      setTimeout(() => setFormStatus(''), 5000);
+    }
   };
 
   const socialLinks = [

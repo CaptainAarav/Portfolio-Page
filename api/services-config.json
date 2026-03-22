@@ -1,0 +1,53 @@
+{
+  "services": [
+    {
+      "containerName": "turtle-bot",
+      "serviceId": "manager-turtle-bot",
+      "serviceName": "Manager Turtle",
+      "serviceType": "discord-bot",
+      "healthCheckUrl": null
+    },
+    {
+      "containerName": "flight-manager-bot",
+      "serviceId": "jet2-manager-bot",
+      "serviceName": "Jet2 Manager",
+      "serviceType": "discord-bot",
+      "healthCheckUrl": null
+    },
+    {
+      "containerName": "discord_bot",
+      "serviceId": "fatty-bot",
+      "serviceName": "Fatty Bot",
+      "serviceType": "discord-bot",
+      "healthCheckUrl": null
+    },
+    {
+      "containerName": "fatty-hosting-frontend",
+      "serviceId": "fattysmp-com",
+      "serviceName": "fattysmp.com",
+      "serviceType": "website",
+      "healthCheckUrl": "https://fattysmp.com/health"
+    },
+    {
+      "containerName": "fatty-hosting-frontend",
+      "serviceId": "fattyhosting-com",
+      "serviceName": "fattyhosting.com",
+      "serviceType": "website",
+      "healthCheckUrl": "https://fattyhosting.com/health"
+    },
+    {
+      "containerName": "jellyfin",
+      "serviceId": "aaravsnetflix-com",
+      "serviceName": "aaravsnetflix.com",
+      "serviceType": "website",
+      "healthCheckUrl": "https://aaravsnetflix.com/health"
+    },
+    {
+      "containerName": "aarav-portfolio",
+      "serviceId": "captainaarav-dev",
+      "serviceName": "captainaarav.dev",
+      "serviceType": "website",
+      "healthCheckUrl": "https://captainaarav.dev/health"
+    }
+  ]
+}

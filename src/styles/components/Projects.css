@@ -46,10 +46,6 @@
   transition: all 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--border-color);
-}
 
 .project-content {
   padding: 2rem;

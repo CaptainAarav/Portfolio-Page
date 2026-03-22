@@ -5,6 +5,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ServerStatus from './components/ServerStatus';
+import Hosting from './components/Hosting';
 import Contact from './components/Contact';
 import silhouette1 from './assets/silhouette1.png';
 import silhouette2 from './assets/silhouette2.png';
@@ -26,6 +27,7 @@ function App() {
       <Skills />
       <Projects />
       <ServerStatus />
+      <Hosting />
       <Contact />
     </div>
   );
